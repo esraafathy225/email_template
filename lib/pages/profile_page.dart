@@ -1,3 +1,4 @@
+import 'package:email_template/components/profile_item.dart';
 import 'package:flutter/material.dart';
 
 class ProfilePage extends StatelessWidget {
@@ -28,12 +29,25 @@ class ProfilePage extends StatelessWidget {
               'nicolasadams@gmail.com',
               style: TextStyle(color: Colors.white70),
             ),
-            SizedBox(height: 8,),
+            SizedBox(
+              height: 8,
+            ),
             ElevatedButton(
               onPressed: () {},
-              child: Text('Upgrade to PRO',style: TextStyle(color: Colors.black),),
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.yellow[700]),
-            )
+              child: Text(
+                'Upgrade to PRO',
+                style: TextStyle(color: Colors.black),
+              ),
+              style:
+                  ElevatedButton.styleFrom(backgroundColor: Colors.yellow[700]),
+            ),
+            SizedBox(height: 16,),
+             ProfileItem(icon: Icons.privacy_tip, title: 'Privacy'),
+             ProfileItem(icon: Icons.history, title: 'Purchase History'),
+             ProfileItem(icon: Icons.support, title: 'Help & Support'),
+             ProfileItem(icon: Icons.settings, title: 'Settings'),
+             ProfileItem(icon: Icons.person_add, title: 'Invite a Friend'),
+             ProfileItem(icon: Icons.logout, title: 'Logout')
           ],
         ),
       ),
